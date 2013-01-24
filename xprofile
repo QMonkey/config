@@ -1,0 +1,2 @@
+export XMODIFIERS=@im=xim
+export QT_IM_MODULE=xim
