@@ -126,7 +126,7 @@ syntax on
 "colorscheme desert 
 "colorscheme elflord
 "colorscheme molokai    " close the tmux first
-"colorscheme ron
+colorscheme ron
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
