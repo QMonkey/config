@@ -119,10 +119,8 @@ syntax enable
 syntax on
 
 " color theme
-"color asmanian2
 "colorscheme torte
 "colorscheme murphy
-"colorscheme desert 
 "colorscheme desert 
 "colorscheme elflord
 "colorscheme molokai    " close the tmux first
