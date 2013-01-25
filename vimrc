@@ -154,7 +154,7 @@ func SetTitle()
 		call append(line(".")+4, " ************************************************************************/") 
 		call append(line(".")+5, "")
 	endif
-	if &filetype == 'cpp'  " | &filetype == 'cc' | &filetype == 'cxx' | &filetype == 'C' | &filetype == 'c++'
+	if &filetype == 'cpp' " | &filetype == 'cc' | &filetype == 'cxx' | &filetype == 'C' | &filetype == 'c++'
 		call append(line(".")+6, "#include<iostream>")
 		call append(line(".")+7, "using namespace std;")
 		call append(line(".")+8, "")
