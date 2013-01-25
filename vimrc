@@ -1,4 +1,4 @@
-"BundlerInstall"
+":BundlerInstall
 set nocompatible               " be improved
 filetype off                   " required!
 
@@ -94,6 +94,12 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'chriskempson/vim-tomorrow-theme'
 
+"---------------
+" Sublime text 2
+"---------------
+" close the tmux first
+Bundle 'molokai'  
+
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set enc=utf-8
@@ -119,7 +125,8 @@ syntax on
 "colorscheme desert 
 "colorscheme desert 
 "colorscheme elflord
-colorscheme ron
+"colorscheme molokai    " close the tmux first
+"colorscheme ron
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
