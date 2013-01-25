@@ -1,3 +1,4 @@
+"BundlerInstall"
 set nocompatible               " be improved
 filetype off                   " required!
 
