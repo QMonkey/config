@@ -62,7 +62,6 @@ Bundle 'nvie/vim-togglemouse'
 " web backend
 Bundle '2072/PHP-Indenting-for-VIm'
 "Bundle 'tpope/vim-rails'
-"Bundle 'beyondwords/vim-jinja2'
 "Bundle 'digitaltoad/vim-jade'
 
 " web front end
@@ -88,11 +87,7 @@ Bundle 'kien/rainbow_parentheses.vim'
 " Color Scheme
 "--------------
 Bundle 'rickharris/vim-blackboard'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'rickharris/vim-monokai'
 Bundle 'tpope/vim-vividchalk'
-Bundle 'Lokaltog/vim-distinguished'
-Bundle 'chriskempson/vim-tomorrow-theme'
 
 "---------------
 " Sublime text 2
@@ -107,7 +102,8 @@ set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 "set termencoding=utf-8
 "set encoding=utf-8
 "set fileencoding=utf-8
-"语言设置
+
+" language settings
 set langmenu=en_US.UTF-8
 set helplang=en
 
@@ -125,6 +121,8 @@ syntax on
 "colorscheme elflord
 "colorscheme molokai    " close the tmux first
 colorscheme ron
+colorscheme vividchalk
+"colorscheme blackboard
 
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
@@ -216,9 +214,9 @@ set expandtab       " expand tab to space
 "winpos 5 5          " 设定窗口位置  
 set go=             " 不要图形按钮  
 "set guifont=Courier_New:h10:cANSI   " 设置字体  
-set novisualbell    " 不要闪烁(不明白)  
-"set background=dark "背景使用黑色 
-" 设置当文件被改动时自动载入
+set novisualbell
+"set background=dark
+" autoload the file when modified
 set autoread
 " quickfix模式
 autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
@@ -226,9 +224,9 @@ autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
 set completeopt=preview,longest,menu
 "共享剪贴板  
 set clipboard+=unnamed 
-"make 运行
+" run make
 :set makeprg=g++\ -Wall\ \ %
-"自动保存
+" auto save
 set autowrite
 set magic                   " 设置魔术
 set guioptions-=T           " 隐藏工具栏
@@ -263,7 +261,7 @@ set gdefault
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 "set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
 "set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
-" 保存全局变量
+" save global
 set viminfo+=!
 " 带有如下符号的单词不要被换行分割
 set iskeyword+=_,$,@,%,#,-
