@@ -1,0 +1,4 @@
+deb http://packages.mate-desktop.org/repo/ubuntu quantal main
+deb-src http://packages.mate-desktop.org/repo/ubuntu quantal main
+deb http://repo.mate-desktop.org/ubuntu quantal main
+deb-src http://repo.mate-desktop.org/ubuntu quantal main
