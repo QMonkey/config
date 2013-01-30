@@ -472,37 +472,8 @@ map <M-F2> :tabnew<CR>
 "打开树状文件目录  
 map <C-F3> \be  
 
-" press F7 to compiler and run
-map <F7> :call CompileRunGcc()<CR>
-func! CompileRunGcc()
-	exec "w"
-	if &filetype == 'c'
-		exec "!g++ % -o %<"
-		exec "! ./%<"
-	elseif &filetype == 'cpp' " | &filetype == 'cc' | &filetype == 'cxx' | &filetype == 'C' | &filetype == 'c++'
-		exec "!g++ % -o %<"
-		exec "! ./%<"
-	elseif &filetype == 'java' 
-		exec "!javac %" 
-		exec "!java %<"
-	elseif &filetype == 'sh'
-		:!./%
-	elseif &filetype == 'py'
-		exec "!python %"
-		exec "!python %<"
-	endif
-endfunc
-
-" press F8 to debug C or C++ with gdb
-map <F8> :call Rungdb()<CR>
-func! Rungdb()
-	exec "w"
-	exec "!g++ % -g -o %<"
-	exec "!gdb ./%<"
-endfunc
-
 " list all files in current directory
-map <F9> :tabnew .<CR>  
+map <F7> :tabnew .<CR>  
 
 " Keybindings for plugin toggle
 nmap <F3> :GundoToggle<cr>
