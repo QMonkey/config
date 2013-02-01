@@ -1,14 +1,11 @@
 ":BundlerInstall
 set nocompatible               " be improved
 filetype off                   " required!
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
-
 "------------------
 " Code Completions
 "------------------
@@ -20,13 +17,11 @@ Bundle 'mattn/zencoding-vim'
 " snipmate dependencies
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-
 "-----------------
 " Fast navigation
 "-----------------
 Bundle 'tsaleh/vim-matchit'
 Bundle 'Lokaltog/vim-easymotion'
-
 "--------------
 " Fast editing
 "--------------
@@ -37,25 +32,22 @@ Bundle 'sjl/gundo.vim'
 Bundle 'kana/vim-smartinput'
 Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
-
 "--------------
 " IDE features
 "--------------
 Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
-Bundle 'humiaozuzu/TabBar'
+"Bundle 'humiaozuzu/TabBar'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
-
 "-------------
 " Other Utils
 " ------------
 Bundle 'humiaozuzu/fcitx-status'
 Bundle 'nvie/vim-togglemouse'
-
 "----------------------------------------
 " Syntax/Indent for language enhancement
 "----------------------------------------
@@ -63,7 +55,6 @@ Bundle 'nvie/vim-togglemouse'
 Bundle '2072/PHP-Indenting-for-VIm'
 "Bundle 'tpope/vim-rails'
 "Bundle 'digitaltoad/vim-jade'
-
 " web front end
 Bundle 'othree/html5.vim'
 Bundle 'tpope/vim-haml'
@@ -72,48 +63,37 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 "Bundle 'groenewege/vim-less'
 "Bundle 'wavded/vim-stylus'
-
 " markup language
 Bundle 'tpope/vim-markdown'
-
 " Ruby
 "Bundle 'tpope/vim-endwise'
-
 " Scheme
 Bundle 'kien/rainbow_parentheses.vim'
 "Bundle 'wlangstroth/vim-racket'
-
 "--------------
 " Color Scheme
 "--------------
 Bundle 'rickharris/vim-blackboard'
 Bundle 'tpope/vim-vividchalk'
-
 "---------------
 " Sublime text 2
 "---------------
 " close the tmux first
 Bundle 'molokai'  
-
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set enc=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 "set termencoding=utf-8
 "set encoding=utf-8
-"set fileencoding=utf-8
-
 " language settings
 set langmenu=en_US.UTF-8
 set helplang=en
-
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
-
 " enable syntax hightlight and completion 
 syntax enable
 syntax on
-
 " color theme
 "colorscheme torte
 "colorscheme murphy
@@ -123,14 +103,12 @@ syntax on
 colorscheme ron
 colorscheme vividchalk
 "colorscheme blackboard
-
 " highlight current line
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
 autocmd InsertEnter * se cul    " 用浅色高亮当前行  
 set cursorline cursorcolumn
-
 " editor settings
 "新建.c,.h,.sh,.java文件，自动插入文件头 
 autocmd BufNewFile *.h,*.hpp,*.hxx,*.c,*.cpp,*.cc,*.cxx,*.C,*.c++,*.sh,*.py,*.java exec ":call SetTitle()" 
@@ -165,7 +143,6 @@ func SetTitle()
 	"新建文件后，自动定位到文件末尾
 	autocmd BufNewFile * normal G
 endfunc 
-
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
       \ if ! exists("g:leave_my_cursor_position_alone") |
@@ -173,7 +150,6 @@ autocmd BufReadPost *
       \         exe "normal g'\"" |
       \     endif |
       \ endif
-
 set cmdheight=1
 set nocompatible
 set nofoldenable                                                  " disable folding"
@@ -196,7 +172,6 @@ set matchpairs+=<:>                                               " specially fo
 "set relativenumber
 set ruler                                                         " show cursor position in status bar
 set showmode                                                      " show mode in status bar (insert/replace/...)
-
 " Default Indentation
 set autoindent
 set smartindent     " indent when
@@ -205,7 +180,6 @@ set softtabstop=4   " backspace &
 set shiftwidth=4    " indent width
 set textwidth=80
 set expandtab       " expand tab to space
-
 "winpos 5 5          " 设定窗口位置  
 set go=             " 不要图形按钮  
 "set guifont=Courier_New:h10:cANSI   " 设置字体  
@@ -242,14 +216,12 @@ set smarttab
 "禁止生成临时文件
 set nobackup
 set noswapfile
-
 " search operations
 set ignorecase
 set hlsearch
 set incsearch
 set smartcase
 "set highlight 	" conflict with highlight current line
-
 "行内替换
 set gdefault
 " 我的状态行显示的内容（包括文件类型和解码）
@@ -272,7 +244,6 @@ set selection=exclusive
 set selectmode=mouse,key
 " 在被分割的窗口间显示空白，便于阅读
 set fillchars=vert:\ ,stl:\ ,stlnc:\
-
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
@@ -280,14 +251,12 @@ autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
-
 " syntax support
 autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
 " js
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
-
 " Rainbow parentheses for Lisp and variants
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
@@ -307,21 +276,17 @@ let g:rbpt_colorpairs = [
     \ ['darkred',     'DarkOrchid3'],
     \ ['red',         'firebrick3'],
     \ ]
-
 let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
-
 " tabbar
-let g:Tb_MaxSize = 2
-let g:Tb_TabWrap = 1
-hi Tb_Normal guifg=white ctermfg=white
-hi Tb_Changed guifg=green ctermfg=green
-hi Tb_VisibleNormal ctermbg=252 ctermfg=235
-hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
-
+"let g:Tb_MaxSize = 2
+"let g:Tb_TabWrap = 1
+"hi Tb_Normal guifg=white ctermfg=white
+"hi Tb_Changed guifg=green ctermfg=green
+"hi Tb_VisibleNormal ctermbg=252 ctermfg=235
+"hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
-
 " Tagbar
 let g:tagbar_left=1
 let g:tagbar_width=30
@@ -343,7 +308,6 @@ if executable('coffeetags')
         \ 'o' : 'object',
         \ }
         \ }
-
   let g:tagbar_type_markdown = {
     \ 'ctagstype' : 'markdown',
     \ 'sort' : 0,
@@ -352,48 +316,10 @@ if executable('coffeetags')
     \ ]
     \ }
 endif
-
 nmap <leader>w :w!<cr>
 nmap <leader>f :find<cr>
-"
-"去空行  
-nnoremap <F2> :g/^\s*$/d<CR> 
 "比较文件  
-nnoremap <C-F2> :vert diffsplit 
-"新建标签  
-map <M-F2> :tabnew<CR>  
-"列出当前目录文件  
-map <F3> :tabnew .<CR>  
-"打开树状文件目录  
-map <C-F3> \be  
-"C，C++ 按F5编译运行
-map <F5> :call CompileRunGcc()<CR>
-func! CompileRunGcc()
-	exec "w"
-	if &filetype == 'c'
-		exec "!gcc % -o %<"
-		exec "! ./%<"
-	elseif &filetype == 'cpp'
-		exec "!g++ % -o %<"
-		exec "! ./%<"
-	elseif &filetype == 'java' 
-		exec "!javac %" 
-		exec "!java %<"
-	elseif &filetype == 'sh'
-		:!./%
-	elseif &filetype == 'py'
-		exec "!python %"
-		exec "!python %<"
-	endif
-endfunc
-"C,C++的调试
-map <F8> :call Rungdb()<CR>
-func! Rungdb()
-	exec "w"
-	exec "!g++ % -g -o %<"
-	exec "!gdb ./%<"
-endfunc
-
+nnoremap <F8> :vert diffsplit 
 " 高亮显示普通txt文件（需要txt.vim脚本）
 au BufRead,BufNewFile *  setfiletype txt
 "自动补全
@@ -406,7 +332,6 @@ au BufRead,BufNewFile *  setfiletype txt
 :inoremap " ""<ESC>i
 :inoremap ' ''<ESC>i
 :inoremap < <><ESC>i
-
 function! ClosePair(char)
 	if getline('.')[col('.') - 1] == a:char
 		return "\<Right>"
@@ -414,7 +339,6 @@ function! ClosePair(char)
 		return a:char
 	endif
 endfunction
-
 " Nerd Tree 
 let NERDChristmasTree=1
 let NERDTreeAutoCenter=1
@@ -430,13 +354,10 @@ let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
 let NERDTreeWinPos = "right"
 "nnoremap f :NERDTreeToggle
-
 " ZenCoding
 let g:user_zen_expandabbr_key='<C-j>'
-
 " powerline
 "let g:Powerline_symbols = 'fancy'
-
 " NeoComplCache
 let g:neocomplcache_enable_at_startup=1
 let g:neoComplcache_disableautocomplete=1
@@ -446,35 +367,25 @@ let g:neocomplcache_enable_smart_case=1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 set completeopt-=preview,longest,menu
-
 imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
 smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
 imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
-
 " SuperTab
 "let g:SuperTabDefultCompletionType='context'
 let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
 let g:SuperTabRetainCompletionType=2
-
 " ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
-
-map <M-F2> :tabnew<CR>  
-"打开树状文件目录  
-map <C-F3> \be  
-
 " list all files in current directory
 map <F7> :tabnew .<CR>  
-
 " Keybindings for plugin toggle
 nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
@@ -482,13 +393,11 @@ nmap <F5> :TagbarToggle<cr>
 nmap <F6> :NERDTreeToggle<cr>
 nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
-
 " easier navigation between split windows
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
 " eggcache vim
 :command W w
 :command WQ wq
@@ -496,7 +405,6 @@ nnoremap <c-l> <c-w>l
 :command Q q
 :command Qa qa
 :command QA qa
-
 " for macvim
 if has("gui_running")
     set go=aAce  " remove toolbar
