@@ -12,8 +12,8 @@ xhost +localhost
 xset dpms force off
 
 # Chinese Input Engine
-#input="fcitx"
-input="ibus"
+input="fcitx"
+#input="ibus"
 
 #==============================================
 # Input Engine
