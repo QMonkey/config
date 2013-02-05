@@ -21,9 +21,9 @@ input="ibus"
 test "x$input" == "x" && input=fcitx
 export XIM=$input
 export XMODIFIERS="@im=$input"
-export QT_IM_MODULES=$input
-export QT4_IM_MODULES=$input
-export GTK_IM_MODULES=$input
+export QT_IM_MODULE=$input
+export QT4_IM_MODULE=$input
+export GTK_IM_MODULE=$input
 
 case "$input" in
     ibus|iBus)
