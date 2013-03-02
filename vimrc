@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 "------------------
 " Code Completions
 "------------------
+Bundle 'jamescarr/snipmate-nodejs'
 Bundle 'Shougo/neocomplcache'
 Bundle 'garbas/vim-snipmate'
 Bundle 'ervandew/supertab'
@@ -17,6 +18,7 @@ Bundle 'mattn/zencoding-vim'
 " snipmate dependencies
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
+"Bundle 'klen/python-mode'
 "-----------------
 " Fast navigation
 "-----------------
