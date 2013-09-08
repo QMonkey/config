@@ -243,19 +243,18 @@ bindkey "\e\e" sudo-command-line
 #}}}
  
 #命令别名 {{{
-alias cp='cp -i'
-alias mv='mv -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
 #alias rm='rm -i'
 alias ls='ls -F --color=auto'
 alias ll='ls -al'
 alias grep='grep --color=auto'
 alias la='ls -a'
-alias pacman='sudo pacman-color'
-alias p='sudo pacman-color'
+#alias pacman='sudo pacman-color'
+#alias p='sudo pacman-color'
 alias y='yaourt'
 alias h='htop'
 alias vi='vim'
-#alias vim='sudo vim'
  
 #[Esc][h] man 当前命令时，显示简短说明
 alias run-help >&/dev/null && unalias run-help

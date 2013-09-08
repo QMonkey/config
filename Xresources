@@ -1,10 +1,8 @@
-#xrdp -load ~/.Xresources
-
 msh:1: command not found: ——————–
 cale: true
 XTerm*utf8Title: true
 XTerm*fontMenu*fontdefault*Label: Default
-XTerm*faceName: Courier 10 Pitch:antialias=True:pixelsize=13
+XTerm*faceName: Courier 10 Pitch:antialias=True:pixelsize=14
 !中文字体
 XTerm*faceNameDoublesize: Microsoft YaHei:antialias=True:pixelsize=10
 !中文输入
@@ -19,7 +17,7 @@ XTerm*faceSize6: 20
 XTerm.cjkWidth:true
 XTerm*background: #000000
 XTerm*foreground: #FFFFFF
-XTerm*scrollBar: true
+XTerm*scrollBar: false
 XTerm*rightScrollBar: true
 XTerm*jumpScroll: true
 XTerm*SaveLines: 1000
