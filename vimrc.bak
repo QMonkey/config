@@ -1,0 +1,349 @@
+set nocompatible               " be improved
+filetype off                   " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (ie. when working on your own plugin)
+Bundle 'file:///Users/gmarik/path/to/plugin'
+ 
+" Syntax
+Bundle 'asciidoc.vim'
+Bundle 'confluencewiki.vim'
+Bundle 'html5.vim'
+Bundle 'JavaScript-syntax'
+Bundle 'mako.vim'
+Bundle 'moin.vim'
+Bundle 'python.vim--Vasiliev'
+Bundle 'xml.vim'
+
+" Color
+Bundle 'desert256.vim'
+Bundle 'Impact'
+Bundle 'matrix.vim'
+Bundle 'vibrantink'
+Bundle 'vividchalk.vim'
+
+" Ftplugin
+Bundle 'python_fold'
+
+" Indent
+Bundle 'indent/html.vim'
+Bundle 'IndentAnything'
+Bundle 'Javascript-Indentation'
+Bundle 'mako.vim--Torborg'
+Bundle 'gg/python.vim'
+
+" Plugin
+Bundle 'The-NERD-tree'
+Bundle 'AutoClose--Alves'
+Bundle 'auto_mkdir'
+Bundle 'cecutil'
+"Bundle 'fcitx.vim'
+Bundle 'FencView.vim'
+Bundle 'FuzzyFinder'
+Bundle 'jsbeautify'
+Bundle 'L9'
+Bundle 'Mark'
+Bundle 'matrix.vim'
+Bundle 'mru.vim'
+Bundle 'The-NERD-Commenter'
+Bundle 'project.vim'
+Bundle 'restart.vim'
+Bundle 'taglist.vim'
+Bundle 'templates.vim'
+Bundle 'vimim.vim'
+Bundle 'ZenCoding.vim'
+Bundle 'css_color.vim'
+Bundle 'hallettj/jslint.vim'
+
+"--------------
+" Color Scheme
+"--------------
+Bundle 'rickharris/vim-blackboard'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'tomasr/molokai'
+Bundle 'desert256.vim'
+Bundle 'Impact'
+Bundle 'matrix.vim'
+Bundle 'vibrantink'
+
+"---------------
+" Sublime text 2
+"---------------
+" close the tmux first
+Bundle 'molokai'  
+
+filetype plugin indent on
+
+"source $VIMRUNTIME/vimrc_example.vim
+"source $VIMRUNTIME/mswin.vim
+"behave mswin
+
+" color theme
+"colorscheme torte
+"colorscheme murphy
+"colorscheme desert 
+"colorscheme elflord
+"colorscheme molokai    " close the tmux first
+"colorscheme ron
+"colorscheme vividchalk
+"colorscheme blackboard
+"color asmanian2     " 设置背景主题  
+
+" encoding dectection
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set enc=utf-8
+set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+"set termencoding=utf-8
+"set encoding=utf-8
+" language settings
+set langmenu=en_US.UTF-8
+set helplang=en
+" enable filetype dectection and ft specific plugin/indent
+" enable syntax hightlight and completion 
+syntax enable
+syntax on
+
+" highlight current line
+"au WinLeave * set nocursorline nocursorcolumn
+"au WinEnter * set cursorline cursorcolumn
+autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
+autocmd InsertEnter * se cul    " 用浅色高亮当前行  
+set cursorline "cursorcolumn
+
+set shortmess=atI   " 启动的时候不显示那个援助乌干达儿童的提示  
+set guioptions+=L
+"set nu              " 显示行号  
+set go=             " 不要图形按钮  
+"set ruler           " 显示标尺  
+set showcmd         " 输入的命令显示出来，看的清楚些  
+"set whichwrap+=<,>,h,l   " 允许backspace和光标键跨越行边界(不建议)  
+set novisualbell    " 不要闪烁(不明白)  
+set foldenable      " 允许折叠  
+set foldmethod=manual   " 手动折叠  
+set background=dark "背景使用黑色 
+set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限  
+" 显示中文帮助
+"if version >= 603
+"	set helplang=cn
+"	set encoding=utf-8
+"endif
+
+set cmdheight=1
+set nocompatible
+set nofoldenable                                                  " disable folding"
+set confirm                                                       " prompt when existing from an unsaved file
+set history=1024
+set backspace=indent,eol,start                                    " More powerful backspacing
+" display settings
+set t_Co=256                                                      " Explicitly tell vim that the terminal has 256 colors "
+set mouse=a                                                       " use mouse in all modes
+set report=0                                                      " always report number of lines changed                "
+set nowrap                                                        " dont wrap lines
+set scrolloff=2                                                   " 2 lines above/below cursor when scrolling
+set number                                                        " show line numbers
+set showmatch                                                     " show matching bracket (briefly jump)
+set showcmd                                                       " show typed command in status bar
+set title                                                         " show file in titlebar
+set laststatus=2                                                  " use 2 lines for the status bar
+set matchtime=2                                                   " show matching bracket for 0.2 seconds
+set matchpairs+=<:>                                               " specially for html
+"set relativenumber
+set ruler                                                         " show cursor position in status bar
+set showmode                                                      " show mode in status bar (insert/replace/...)
+" Default Indentation
+"set autoindent
+"set smartindent     " indent when
+"set tabstop=4       " tab width
+"set softtabstop=4   " backspace & 
+"set shiftwidth=4    " indent width
+set textwidth=80
+set expandtab       " expand tab to space
+set go=             " 不要图形按钮  
+"set guifont=Courier_New:h10:cANSI   " 设置字体  
+set novisualbell
+"set background=dark
+" autoload the file when modified
+set autoread
+"代码补全 
+set completeopt=preview,longest,menu
+"共享剪贴板  
+set clipboard+=unnamed 
+" auto save
+set autowrite
+set magic                   " 设置魔术
+set guioptions-=T           " 隐藏工具栏
+set guioptions-=m           " 隐藏菜单栏
+" 设置在状态行显示的信息
+set foldcolumn=0
+set foldmethod=indent 
+set foldlevel=3 
+set foldenable              " 开始折叠
+" 去掉输入错误的提示声音
+set noeb
+" 自动缩进
+set cindent
+" 不要用空格代替制表符
+set noexpandtab
+" 在行和段开始处使用制表符
+set smarttab
+"禁止生成临时文件
+set nobackup
+set noswapfile
+" search operations
+set ignorecase
+set hlsearch
+set incsearch
+set smartcase
+"set highlight 	" conflict with highlight current line
+"行内替换
+set gdefault
+" 我的状态行显示的内容（包括文件类型和解码）
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+"set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
+set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
+" save global
+set viminfo+=!
+" 带有如下符号的单词不要被换行分割
+set iskeyword+=_,$,@,%,#,-
+" 字符间插入的像素行数目
+set linespace=0
+" 增强模式中的命令行自动完成操作
+set wildmenu
+" 使回格键（backspace）正常处理indent, eol, start等
+set backspace=2
+" 允许backspace和光标键跨越行边界
+set whichwrap+=<,>,h,l
+set selection=exclusive
+set selectmode=mouse,key
+" 在被分割的窗口间显示空白，便于阅读
+set fillchars=vert:\ ,stl:\ ,stlnc:\
+" 高亮显示普通txt文件（需要txt.vim脚本）
+au BufRead,BufNewFile *  setfiletype txt
+
+" When editing a file, always jump to the last cursor position
+autocmd BufReadPost *
+      \ if ! exists("g:leave_my_cursor_position_alone") |
+      \     if line("'\"") > 0 && line ("'\"") <= line("$") |
+      \         exe "normal g'\"" |
+      \     endif |
+      \ endif
+
+" NERD Tree 
+let NERDChristmasTree=1
+let NERDTreeAutoCenter=1
+let NERDTreeShowBookmarks=1
+let NERDTreeMouseMode=2
+"let NERDTreeShowFiles=1
+"let NERDTreeShowLineNumbers=1
+let NERDTreeShowHidden=1
+let NERDTreeWinSize=30
+let NERDTreeChDirMode=2
+"let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
+let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+let NERDTreeShowBookmarks=1
+let NERDTreeWinPos = "left"
+" ctrlp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.DS_Store  " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+" list all files in current directory 
+" Keybindings for plugin toggle
+nmap <F2> :NERDTreeToggle<cr>
+
+"在 vim 启动的时候默认开启 NERDTree（autocmd 可以缩写为 au）
+ autocmd VimEnter * NERDTree 
+
+
+" CTags的设定  
+let Tlist_Sort_Type = "name"    " 按照名称排序  
+let Tlist_Use_Right_Window = 1  " 在右侧显示窗口  
+let Tlist_Compart_Format = 1    " 压缩方式  
+let Tlist_Exist_OnlyWindow = 1  " 如果只有一个buffer，kill窗口也kill掉buffer  
+let Tlist_File_Fold_Auto_Close = 0  " 不要关闭其他文件的tags  
+"let Tlist_Enable_Fold_Column = 0    " 不要显示折叠树  
+"autocmd FileType java set tags+=D:\tools\java\tags  
+"autocmd FileType h,cpp,cc,c set tags+=D:\tools\cpp\tags  
+"let Tlist_Show_One_File=1            "不同时显示多个文件的tag，只显示当前文件的
+"设置tags  
+set tags=tags  
+"set autochdir 
+
+"默认打开Taglist 
+let Tlist_Auto_Open=1 
+
+" Tag list (ctags) 
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags' 
+let Tlist_Show_One_File = 1 "不同时显示多个文件的tag，只显示当前文件的 
+let Tlist_Exit_OnlyWindow = 1 "如果taglist窗口是最后一个窗口，则退出vim 
+let Tlist_Use_Right_Window = 1 "在右侧窗口中显示taglist窗口
+" minibufexpl插件的一般设置
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+" 隐藏工具栏，可用快捷键F3切换
+"set guioptions-=T
+"map <silent> <F3> :if &guioptions =~# "T"  <Bar>
+"set guioptions-=T <Bar>
+"else  <Bar>
+"set guioptions+=T  <Bar>
+"endif <CR>
+"那么我们打开一个cp936编码的文件，Vim会将内容转换为utf-8格式来显示，但是保存的时候文件的编码却依然是cp936
+"如果我的工作环境主要是编辑utf-8，偶尔会修改一下cp936的编码，我们该怎么配置呢？
+"首先我们可以把fileencoding留空，然后只配置fileencodings(fencs):utf-8，cp936
+"按照上面的规则，Vim就会自动把文件保存为cp936的编码了
+"如果我编辑了一个utf-8文件，想把它以cp936的格式保存，该怎么办呢？
+"在命令行模式输入 :set fenc=cp936 然后保存文件即可，保存之后再输入:set fenc=utf-8就可以继续编辑其他utf-8文件了
+
+"Alpha Window
+"自动透明
+au GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 200)  
+"自动最大化窗口
+au GUIEnter * call libcallnr("vimtweak.dll","EnableMaximize",1)
+"几个更改alpha的快捷键  
+"map <M-8> <Esc>:call libcallnr("vimtweak.dll", "SetAlpha", 180) <CR>  
+"map <M-9> <Esc>:call libcallnr("vimtweak.dll", "SetAlpha", 230) <CR>  
+"map <M-0> <Esc>:call libcallnr("vimtweak.dll", "SetAlpha", 255) <CR>  
+"map <leader>aw :call libcallnr("vimtweak.dll","SetAlpha",200)<cr>
+"map <leader>aW :call libcallnr("vimtweak.dll","SetAlpha",255)<cr>
+"Maximized Window
+map <leader>mw :call libcallnr("vimtweak.dll","EnableMaximize",1)<cr>
+map <leader>mW :call libcallnr("vimtweak.dll","nableMaximize",0)<cr>
+"TopMost Window
+map <leader>et :call libcallnr("vimtweak.dll","EnableTopMost",1)<cr>
+map <leader>eT :call libcallnr("vimtweak.dll","EnableTopMost",0)<cr>
+
+
+" 能够漂亮地显示.NFO文件
+set encoding=utf-8
+function! SetFileEncodings(encodings)
+	let b:myfileencodingsbak=&fileencodings
+	let &fileencodings=a:encodings
+endfunction
+function! RestoreFileEncodings()
+	let &fileencodings=b:myfileencodingsbak
+	unlet b:myfileencodingsbak
+endfunction
+au BufReadPre *.nfo call SetFileEncodings(‘cp437′)|set ambiwidth=single
+au BufReadPost *.nfo call RestoreFileEncodings()
+" Gvim标签定制
+set guitablabel=%{ShortTabLabel()}
+function ShortTabLabel ()
+	let bufnrlist = tabpagebuflist (v:lnum)
+	let label = bufname (bufnrlist[tabpagewinnr (v:lnum) -1])
+	let filename = fnamemodify (label, ‘:t’)
+	return filename
+endfunction
