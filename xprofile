@@ -1,36 +1,9 @@
-#!/bin/sh
-#
-# ~/.xprofile
-#
+# fcitx
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export XMODIFIERS="@im=fcitx"
 
-# Change the language to zh_CN
-#export LANG='zh_CN.UTF-8'
-#export LC_ALL='zh_CN.UTF-8'
-
-# Let all the host connect to X
-xhost +localhost
-xset dpms force off
-
-# Chinese Input Engine
-input="fcitx"
-#input="ibus"
-
-#==============================================
-# Input Engine
-#==============================================
-test "x$input" == "x" && input=fcitx
-export XIM=$input
-export XMODIFIERS="@im=$input"
-export QT_IM_MODULE=$input
-export QT4_IM_MODULE=$input
-export GTK_IM_MODULE=$input
-
-case "$input" in
-    ibus|iBus)
-        #export XIM_PROGRAM='ibus-daemon --xim --panel=/usr/share/ibus/panel.py'
-        export XIM_PROGRAM='ibus-daemin --xim'
-        ;;
-    fcitx)
-        export XIM_PROGRAM='fcitx'
-        ;;
-esac
+# ibus
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export XMODIFIERS="@im=fcitx"
